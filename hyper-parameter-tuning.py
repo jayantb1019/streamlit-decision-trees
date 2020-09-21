@@ -35,6 +35,7 @@ min_samples_leaf = st.sidebar.slider(
 criterion = st.sidebar.selectbox('Spliting Criterion', ['gini', 'entropy'])
 
 # criterion = st.sidebar.selectbox('Spliting Criterion', ['gini', 'entropy'])
+# criterion = st.sidebar.selectbox('Spliting Criterion', ['gini', 'entropy'])
 
 
 @st.cache
