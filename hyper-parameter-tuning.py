@@ -4,7 +4,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier, export_graphviz
 from sklearn.metrics import accuracy_score, confusion_matrix
-from IPython.display import Image
+#from IPython.display import Image
 from sklearn.externals.six import StringIO
 import pydotplus
 import graphviz
