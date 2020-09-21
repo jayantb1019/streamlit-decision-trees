@@ -66,12 +66,51 @@ def evaluate_model(dt_classifier):
     st.write('Accuracy : ', 100 *
              np.round(accuracy_score(y_train, y_train_pred), 3))
     st.write('#### Confusion Matrix')
-    st.write(confusion_matrix(y_train, y_train_pred))
+    confusion = confusion_matrix(y_train, y_train_pred)
+    st.write(confusion)
+    TP = confusion[1, 1]  # true positive
+    TN = confusion[0, 0]  # true negatives
+    FP = confusion[0, 1]  # false positives
+    FN = confusion[1, 0]  # false negatives
+
+    sensitivity = TP/(FN + TP)
+    specificity = TN/(FP + TN)
+    falsePositiveRate = FP/(FP + TN)
+    positivePredictivePower = TP/(TP + FP)
+    negativePredictivePower = TN/(TN + FN)
+    st.write('Sensitivity / Recall: ', round(100*sensitivity, 3), '%')
+    st.write('Specificity : ',  round(100*specificity, 3), '%')
+    st.write('False Positive Rate : ',  round(100*falsePositiveRate, 3), '%')
+    st.write('Precision / Positive Predictive Power : ',
+             round(100*positivePredictivePower, 3), '%')
+    st.write('Negative Predictive Power : ',  round(
+        100*negativePredictivePower, 3), '%')
+
     st.write("-"*60)
     st.write('### Test Set Performance')
     st.write('Accuracy : ', 100*np.round(accuracy_score(y_test, y_test_pred), 3))
     st.write('#### Confusion Matrix')
-    st.write(confusion_matrix(y_test, y_test_pred))
+    confusion = confusion_matrix(y_test, y_test_pred)
+
+    st.write(confusion)
+
+    TP = confusion[1, 1]  # true positive
+    TN = confusion[0, 0]  # true negatives
+    FP = confusion[0, 1]  # false positives
+    FN = confusion[1, 0]  # false negatives
+
+    sensitivity = TP/(FN + TP)
+    specificity = TN/(FP + TN)
+    falsePositiveRate = FP/(FP + TN)
+    positivePredictivePower = TP/(TP + FP)
+    negativePredictivePower = TN/(TN + FN)
+    st.write('Sensitivity / Recall: ', round(100*sensitivity, 3), '%')
+    st.write('Specificity : ',  round(100*specificity, 3), '%')
+    st.write('False Positive Rate : ',  round(100*falsePositiveRate, 3), '%')
+    st.write('Precision / Positive Predictive Power : ',
+             round(100*positivePredictivePower, 3), '%')
+    st.write('Negative Predictive Power : ',  round(
+        100*negativePredictivePower, 3), '%')
 
 
 # st.write("-"*60)
