@@ -34,6 +34,8 @@ min_samples_leaf = st.sidebar.slider(
 
 criterion = st.sidebar.selectbox('Spliting Criterion', ['gini', 'entropy'])
 
+# criterion = st.sidebar.selectbox('Spliting Criterion', ['gini', 'entropy'])
+
 
 @st.cache
 def classify(max_depth, max_leaf_nodes=None, min_samples_split=None, min_samples_leaf=None, criterion='gini'):
