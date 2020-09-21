@@ -10,7 +10,7 @@ import pydotplus
 import graphviz
 
 st.title('Decision Trees - Hyper Parameter Tuning')
-df = pd.read_csv('../heart_v2.csv')
+df = pd.read_csv('./heart_v2.csv')
 y = df.pop('heart disease')
 X = df
 
