@@ -19,7 +19,7 @@ Go [here](https://enigmatic-cove-99946.herokuapp.com/)
 
 ## Local Hosting
 
-- Install streamlit using `pip install streamlit`
+- Install streamlit using `pip install streamlit`. Look [here](https://docs.streamlit.io/en/stable/troubleshooting/clean-install.html#install-streamlit-on-windows) for installation guide.
 - Run `streamlit run <file.py>`
 - More examples and documentation of streamlit can be found [here](https://www.streamlit.io/)
 
